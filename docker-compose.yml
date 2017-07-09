@@ -3,7 +3,11 @@ mysql:
   ports:
     - "3306:3306"
   environment:
-    - MYSQL_ROOT_PASSWORD=root
-    - MYSQL_DATABASE=test
+    - MYSQL_DATABASE=petclinic
+    - MYSQL_ROOT_PASSWORD=petclinic
   volumes:
     - "./conf.d:/etc/mysql/conf.d:ro"
+petclinic:
+  image: thetonymaster/pet-clinic
+  expose:
+    - "8080"
