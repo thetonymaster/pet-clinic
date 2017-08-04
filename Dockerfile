@@ -5,4 +5,5 @@ ADD . /app
 
 RUN ./mvnw compile
 RUN ./mvnw test-compile
-RUN ./mvnw process-test-resources	
+RUN ./mvnw test
+RUN ./mvnw dependency:go-offline
